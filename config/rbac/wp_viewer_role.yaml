@@ -1,0 +1,27 @@
+# permissions for end users to view wps.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: wp-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: wp
+    app.kubernetes.io/part-of: wp
+    app.kubernetes.io/managed-by: kustomize
+  name: wp-viewer-role
+rules:
+- apiGroups:
+  - wp.gurasan.github.io
+  resources:
+  - wps
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - wp.gurasan.github.io
+  resources:
+  - wps/status
+  verbs:
+  - get

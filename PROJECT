@@ -7,4 +7,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: wp
 repo: github.com/ryuichi1208.wp
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: gurasan.github.io
+  group: wp
+  kind: Wp
+  path: github.com/ryuichi1208.wp/api/v1
+  version: v1
 version: "3"

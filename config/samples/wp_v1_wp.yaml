@@ -1,0 +1,12 @@
+apiVersion: wp.gurasan.github.io/v1
+kind: Wp
+metadata:
+  labels:
+    app.kubernetes.io/name: wp
+    app.kubernetes.io/instance: wp-sample
+    app.kubernetes.io/part-of: wp
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: wp
+  name: wp-sample
+spec:
+  # TODO(user): Add fields here
