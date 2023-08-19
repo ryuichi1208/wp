@@ -15,7 +15,14 @@ spec:
     singular: wp
   scope: Namespaced
   versions:
-  - name: v1
+  - additionalPrinterColumns:
+    - jsonPath: .metadata.creationTimestamp
+      name: Age
+      type: date
+    - jsonPath: .metadata.resourceVersion
+      name: Notified
+      type: string
+    name: v1
     schema:
       openAPIV3Schema:
         description: Wp is the Schema for the wps API
@@ -35,8 +42,7 @@ spec:
           spec:
             description: WpSpec defines the desired state of Wp
             properties:
-              foo:
-                description: Foo is an example field of Wp. Edit wp_types.go to remove/update
+              version:
                 type: string
             type: object
           status:

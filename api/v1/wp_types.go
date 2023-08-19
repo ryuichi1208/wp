@@ -36,6 +36,8 @@ type WpStatus struct {
 
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status
+//+kubebuilder:printcolumn:name="Age",type="date",JSONPath=".metadata.creationTimestamp"
+//+kubebuilder:printcolumn:name="Notified",type=string,JSONPath=`.metadata.resourceVersion`
 
 // Wp is the Schema for the wps API
 type Wp struct {

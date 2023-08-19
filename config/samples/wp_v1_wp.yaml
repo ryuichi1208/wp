@@ -9,4 +9,5 @@ metadata:
     app.kubernetes.io/created-by: wp
   name: wp-sample
 spec:
+  version: "1.2"
   # TODO(user): Add fields here
