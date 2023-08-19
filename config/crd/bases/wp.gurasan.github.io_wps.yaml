@@ -47,6 +47,11 @@ spec:
             type: object
           status:
             description: WpStatus defines the observed state of Wp
+            properties:
+              ready:
+                type: boolean
+              version:
+                type: string
             type: object
         type: object
     served: true

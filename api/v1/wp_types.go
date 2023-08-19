@@ -30,8 +30,8 @@ type WpSpec struct {
 
 // WpStatus defines the observed state of Wp
 type WpStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	Ready   bool   `json:"ready,omitempty"`
+	Version string `json:"version,omitempty"`
 }
 
 //+kubebuilder:object:root=true
